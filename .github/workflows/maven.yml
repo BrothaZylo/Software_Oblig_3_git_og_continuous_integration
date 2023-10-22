@@ -22,10 +22,3 @@
       - name: Bygge maven
         run: mvn -B package --file pom.xml
 
-      - name: Sjekke dir
-        run: ls -a
-
-      - name: Hva ligger inne i dir
-        run: |
-          cd target
-          ls -a
