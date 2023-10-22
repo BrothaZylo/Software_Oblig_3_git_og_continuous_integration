@@ -1,0 +1,30 @@
+  name: Oblig3 - git og continuous integration
+
+
+  on:
+    push:
+      branches: [main]
+
+  jobs:
+    build:
+
+      runs-on: ubuntu-latest
+      steps:
+      - name: Sjekk ut kode
+        uses: actions/checkout@v2
+
+      - name: Sette opp JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: 19
+
+      - name: Bygge maven
+        run: mvn -B package --file pom.xml
+
+      - name: Sjekke dir
+        run: ls -a
+
+      - name: Hva ligger inne i dir
+        run: |
+          cd target
+          ls -a
