@@ -16,7 +16,7 @@
       - name: Sette opp JDK
         uses: actions/setup-java@v2
         with:
-          java-version: 20
+          java-version: 17
 
       - name: Bygge maven
         run: mvn -B package --file pom.xml
