@@ -11,7 +11,7 @@
       runs-on: ubuntu-latest
       steps:
       - name: Sjekk ut kode
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Sette opp JDK
         uses: actions/setup-java@v3
